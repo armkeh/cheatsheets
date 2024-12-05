@@ -1,0 +1,9 @@
+#+Title: Notes on Designing Data Intensive Applications, Martin Kleppmann, 2017
+#+Author: Mark Armstrong
+#+Description: Notes on Designing Data Intensive Applications, Martin Kleppmann, 2017
+
+* Preamble
+
+The book may be accessed online through O'Reilly, if you have a membership;
+https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/.
+If you have an account at a university, check if it offers you access.
