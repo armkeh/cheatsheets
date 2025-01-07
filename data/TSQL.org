@@ -1,0 +1,43 @@
+
+* Data Manipulation Language (DML)
+
+** Notes
+
+The “M” in DML may refer to
+- /Manipulation/, in which case DML incorporates both ~SELECT~ statements
+  and modification statements, or
+- /Modification/, in which case it excludes ~SELECT~ statements.
+
+** Data Query Language (DQL)
+
+*** Simple queries and their evaluation
+
+Sample query, with clause order evaluation visualed by indentation level:
+#+begin_src sql
+        SELECT OrderDate, COUNT(OrderID) AS Orders
+FROM Sales.SalesOrder
+  WHERE Status = 'Shipped'
+    GROUP BY OrderDate
+      HAVING COUNT(OrderID) > 1
+          ORDER BY OrderData DESC;
+#+end_src
+So, logical evaluation proceeds from the ~FROM~ clause, to ~WHERE~, ~GROUP BY~, ~HAVING~,
+~SELECT~ and finally ~ORDER BY~.
+
+Reference: https://learn.microsoft.com/en-us/training/modules/introduction-to-transact-sql/4-examine-select-statement
+
+*** Datatype conversions
+
+|-------------------+----------------+-------------+-------------|
+| SQL ANSI standard | T-SQL specific | Description | Differences |
+|-------------------+----------------+-------------+-------------|
+|                   |                |             |             |
+|-------------------+----------------+-------------+-------------|
+
+References: https://learn.microsoft.com/en-us/training/modules/introduction-to-transact-sql/5a-data-types
+
+** Data Modification Language (DML)
+
+* Data Definition Language (DDL)
+
+* Data Control Language (DCL)
